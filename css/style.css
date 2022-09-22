@@ -1,0 +1,15 @@
+header {
+  display: flex;
+}
+
+header::before {
+  background-image: url(../images.jpeg)
+}
+
+header h1 {
+  font-family: fantasy;
+  font-size: calc(2vh+2vw+2rem);
+
+}
+
+main
