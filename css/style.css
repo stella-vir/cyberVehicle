@@ -1,15 +1,102 @@
+/* css var pass into js */
+:root {
+  --base: 5;
+  --len: 10;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  line-height: 2;
+}
 header {
+  height: 100vh;
   display: flex;
+  flex-direction: column;
+  place-content: center;
+  position: relative;
+
+
 }
 
 header::before {
-  background-image: url(../images.jpeg)
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../road.jpg");
+  background-color: navy;
+  background-size: contain;
+  z-index: -1;
+  background-position: center;
+
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in 0.5s;
+
+}
+
+.loaded header::before {
+  transform: scale(1);
 }
 
 header h1 {
+  color: white;
   font-family: fantasy;
-  font-size: calc(2vh+2vw+2rem);
+  font-size: calc(10vh+10vw+10rem);
+  /* font-size: calc(10vh+10vw+10rem*(var(--base)/var(--len))); */
+  height: 33vh;
+  line-height: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 38.2vw solid #FFFFFF;
+  background-color: #96424242;
+  padding-left: 3rem;
+}
+
+body {
+  background-color: beige;
+  font-family: fantasy;
+}
+main {
+  padding: 3rem 5rem 3rem 0rem;
+  margin-left: 38.2vw;
+}
+
+@media all and (max-width: 767px) {
+  main {
+    padding: 5rem 5rem 5rem 5rem;
+  }
+}
+
+main h3 {
+  font-size: 3rem;
+  /* color: #FFFFFF; */
+  font-family: monospace;
+  margin: 5rem 0;
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: beige;
+  /* background-color: #999; */
 
 }
 
-main
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 5rem 3rem 0rem;
+  margin-left: 38.2vw;
+}
