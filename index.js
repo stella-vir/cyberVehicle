@@ -17,10 +17,10 @@ window.addEventListener('load', (ev) => {
 });
 
 
-ctx.canvas.width  = window.innerWidth/2;
-ctx.canvas.height = window.innerHeight;
-let centerX = canvas.width/5 + 30;
-let centerY = canvas.height/5;
+ctx.canvas.width  = window.innerWidth/3;
+ctx.canvas.height = window.innerHeight/3;
+let centerX = canvas.width/5 + 50;
+let centerY = canvas.height/5 + 60;
 
 function enginePlug() {
   ctx.beginPath();
@@ -52,15 +52,15 @@ function enginePlug() {
 enginePlug();
 
 canvas.addEventListener('mouseover', (event) => {
-  canvas.style.height="125%";
-  canvas.style.width="125%";
+  canvas.style.height="65%";
+  canvas.style.width="65%";
   canvas.style.position='absolute';
 });
 
 canvas.addEventListener('mouseout', (event) => {
 
-  canvas.style.height="100%";
-  canvas.style.width="100%";
+  canvas.style.height="50%";
+  canvas.style.width="50%";
   canvas.style.position='absolute';
 });
 

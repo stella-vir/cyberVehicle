@@ -35,7 +35,7 @@ header::before {
   z-index: -1;
   background-position: center;
 
-  transform: scale(1.15);
+  transform: scale(1.2);
   transition: transform .3s ease-in .3s;
 
 }
@@ -47,7 +47,7 @@ header::before {
 header h1 {
   color: white;
   font-family: fantasy;
-  font-size: 5vw;
+  font-size: 4.5vw;
   /* font-siz: calc(2vh+2vw+2rem); */
   /* font-size: calc(10vh+10vw+10rem*(var(--base)/var(--len))); */
   height: 33vh;
@@ -88,7 +88,7 @@ main {
 }
 
 main h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   /* color: #FFFFFF; */
   font-family: monospace;
   margin: 2rem 0;
