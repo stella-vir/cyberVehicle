@@ -17,9 +17,9 @@ window.addEventListener('load', (ev) => {
 });
 
 
-ctx.canvas.width  = window.innerWidth;
+ctx.canvas.width  = window.innerWidth/2;
 ctx.canvas.height = window.innerHeight;
-let centerX = canvas.width/5 - 100;
+let centerX = canvas.width/5 + 30;
 let centerY = canvas.height/5;
 
 function enginePlug() {

@@ -1,0 +1,3 @@
+.loaded header::before {
+  transform: scale(1);
+}
