@@ -4,6 +4,7 @@ let c = document.getElementById("canvas");
 let ctx = c.getContext("2d");
 let canvas = document.getElementById('canvas');
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let root = document.documentElement;
   let h1 = document.querySelector('header h1');
@@ -74,8 +75,39 @@ function popup(ev) {
     null,
     'popup,width=200,height=200,left=200,top=200, noopener'
   );
-
 };
+
+/*
+canvas.addEventListener('click', (ev) => {
+  // const img = new Image(150, 150);
+  // img.src = 'electromagnetic.gif';
+  // img.src = 'motor.gif';
+  let myGif;
+  const gifUrl = 'https://www.gizmodo.com.au/wp-content/uploads/sites/2/2017/10/12/lfbzmwnvudjfeaq5cvx9.gif?quality=80&resize=832,468';
+
+  // Can not load gif cross domain unless it has CORS header
+  // const gifURL = "https://upload.wikimedia.org/wikipedia/commons/a/a2/Wax_fire.gif";
+  // timeout just waits till script has been parsed and executed
+  // then starts loading a gif
+  setTimeout(()=>{
+      myGif = GIF();                  // creates a new gif
+      myGif.onerror = function(e){
+         console.log("Gif loading error " + e.type);
+      }
+      myGif.load(gifUrl);
+
+  },0);
+
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // ctx.drawImage(img, centerX - 100, centerY -  100, img.width, img.height);
+  ctx.drawImage(gifUrl, centerX - 100, centerY -  100, gifUrl.width, gifUrl.height);
+
+});
+
+*/
+
+
 
 
 
