@@ -40,6 +40,11 @@ header::before {
 
 }
 
+button {
+  background-color: green;
+  color: white;
+}
+
 .loaded header::before {
   transform: scale(1);
 }
@@ -80,12 +85,6 @@ main {
   margin-left: 38.2vw;
 }
 
-@media all and (max-width: 700px) {
-  main {
-    padding: 2rem 2rem 2rem 0rem;
-
-  }
-}
 
 main h3 {
   font-size: 2rem;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <form action="#" id="myForm">
+    <fieldset>
+    <legend>Info</legend>
+    <div class="formBox">
+    <label for="first">First Name</label>
+    <input type="text" id="first" name="first">
+    </div>
+    <div class="formBox">
+    <label for="last">Last Name</label>
+    <input type="text" id="last" name="last">
+    </div>
+    <div class="formBox">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email">
+    </div>
+    <button type="submit" name="submit" >Submit</button>
+    </fieldset>
+    </form>
+    <div class="" id='toBeReplaced'>
+    </div>
+    <script src="form.js">
+        document.addEventListener('DOMContentLoaded', () => {
+          document
+           .getElementById('myForm');
+           .addEventListener('submit', handleForm());
+        });
+
+        function handleForm(ev) {
+            ev.preventdefault();
+            let myForm = ev.target;
+            let fd = new FormData(myForm);
+        }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+// end
