@@ -29,7 +29,7 @@ header::before {
   content: '';
   width: 100vw;
   height: 100vh;
-  background-image: url("../motor.png");
+  background-image: url("../thermal.png");
   background-color: navy;
   background-size: contain;
   z-index: -1;
@@ -61,7 +61,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-left: 38.2vw solid #80ff00;
+  border-left: 38.2vw solid #96d99126;
   background-color: #86d99126;
   padding-left: 2rem;
 }
