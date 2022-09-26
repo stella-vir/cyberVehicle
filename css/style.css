@@ -29,7 +29,7 @@ header::before {
   content: '';
   width: 100vw;
   height: 100vh;
-  background-image: url("../road.jpg");
+  background-image: url("../motor.png");
   background-color: navy;
   background-size: contain;
   z-index: -1;
@@ -50,7 +50,7 @@ button {
 }
 
 header h1 {
-  color: white;
+  color: green;
   font-family: fantasy;
   font-size: 4.5vw;
   /* font-siz: calc(2vh+2vw+2rem); */
@@ -61,8 +61,8 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-left: 38.2vw solid #FFFFFF;
-  background-color: #96424242;
+  border-left: 38.2vw solid #80ff00;
+  background-color: #86d99126;
   padding-left: 2rem;
 }
 
