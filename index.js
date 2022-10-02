@@ -52,24 +52,57 @@ function enginePlug() {
 
 enginePlug();
 
-canvas.addEventListener('mouseover', (event) => {
+canvas.addEventListener('mouseover', (ev) => {
   canvas.style.height="65%";
   canvas.style.width="65%";
   canvas.style.position='absolute';
 });
 
-canvas.addEventListener('mouseout', (event) => {
+canvas.addEventListener('mouseout', (ev) => {
 
   canvas.style.height="50%";
   canvas.style.width="50%";
   canvas.style.position='absolute';
 });
 
+canvas.addEventListener('mouseover', (ev) => {
+  let key = 'personalized';
+  let val = encodeURIComponent('GHK234567');
+  let thirtyDays = 60 * 60 * 24 * 30;
+
+  // country = FI webserver_id =bf01ce6107d48160f71159d11acd69d3
+  // first-party third-party advertisers/analytics page visit history
+  // zombie cookies 'Adobe flash cookies' ban specific users
+  document.cookie = `${key}=${val}; path=/; max-age=${thirtyDays};`;
+  // domain = sub.example.com
+  // some-site=Strict | Lax
+  log('cookie key val pair created', key, val);
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('remove').addEventListener('click', (ev) => {
+    let key = 'trackingId1';
+
+    if (document.cookie)
+    {
+      log(document.cookie.split(';'));
+      document.cookie = `${key}=; path=/; expires=2022-10-01T05:31:02.000Z;`;
+      log('cookies to be deleted', key);
+    } else
+    {
+      log('No cookies.');
+    }
+  });
+
+});
+
 canvas.addEventListener('click', this.popup);
 
 
 function popup(ev) {
-  console.log('a popup window');
+  log('a popup window');
   let win = window.open(
     'win.html',
     null,
@@ -78,6 +111,7 @@ function popup(ev) {
 };
 
 /*
+// add gif pic once the engine starts
 canvas.addEventListener('click', (ev) => {
   // const img = new Image(150, 150);
   // img.src = 'electromagnetic.gif';
